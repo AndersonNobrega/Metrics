@@ -1,0 +1,5 @@
+Desvio Padrão entre NTC e NCC:
+C# - 0.64
+PHP - 0.41
+Java- 0.51
+Visual Basic - 1.30
