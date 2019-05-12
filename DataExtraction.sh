@@ -25,8 +25,6 @@ do
 		path=$( basename "${dir}" )
 		java -Xss32m -Xms1024m -Xmx8192m -jar VocabularyExtractor_Generic.jar -lang "$language" -n "$path" -d "$language_dir"/"$path"/ -f Project_Metrics/"$language"/
 		python3 Tokenize.py Project_Metrics/"$language"/Tokens/"$path"
-		#rm -rf "$language_dir"/"$path"/
+		rm -rf "$language_dir"/"$path"/
 	fi
 done 
-
-#python3 MergeCSV.py "$language_dir"

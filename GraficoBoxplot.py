@@ -46,20 +46,21 @@ valores_php = ler_dados("PHP/PHPMetricas.csv")
 valores_java = ler_dados("Java/JavaMetricas.csv")
 valores_vb = ler_dados("Visual Basic/VisualBasicMetricas.csv")
 valores_c = ler_dados("C/CMetricas.csv")
+valores_js = ler_dados("JavaScript/JavaScriptMetricas.csv")
 
 try:
     makedirs("Linguagens/")
 except FileExistsError:
     pass
 
-ntcf = [valores_csharp[0], valores_php[0], valores_java[0], valores_vb[0], valores_c[0]]
-ntc = [valores_csharp[1], valores_php[1], valores_java[1], valores_vb[1], valores_c[1]]
-nccf = [valores_csharp[2], valores_php[2], valores_java[2], valores_vb[2], valores_c[2]]
-ncc = [valores_csharp[3], valores_php[3], valores_java[3], valores_vb[3], valores_c[3]]
-nlcf = [valores_csharp[4], valores_php[4], valores_java[4], valores_vb[4], valores_c[4]]
-nlc = [valores_csharp[5], valores_php[5], valores_java[5], valores_vb[5], valores_c[5]]
+ntcf = [valores_csharp[0], valores_php[0], valores_java[0], valores_vb[0], valores_c[0], valores_js[0]]
+ntc = [valores_csharp[1], valores_php[1], valores_java[1], valores_vb[1], valores_c[1], valores_js[1]]
+nccf = [valores_csharp[2], valores_php[2], valores_java[2], valores_vb[2], valores_c[2], valores_js[2]]
+ncc = [valores_csharp[3], valores_php[3], valores_java[3], valores_vb[3], valores_c[3], valores_js[3]]
+nlcf = [valores_csharp[4], valores_php[4], valores_java[4], valores_vb[4], valores_c[4], valores_js[4]]
+nlc = [valores_csharp[5], valores_php[5], valores_java[5], valores_vb[5], valores_c[5], valores_js[5]]
 
-languages = ["C#", "PHP", "Java", "Visual Basic", "C"]
+languages = ["C#", "PHP", "Java", "Visual Basic", "C", "JavaScript"]
 
 plot_grafico("NTCF/NTTP", ntcf, languages, "NTCF")
 plot_grafico("NTC/NTTP", ntc, languages, "NTC")

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#./DownloadRepo.sh
-#sudo -u robotica shutdown
+./DownloadRepo.sh
 ./LanguageMetrics.sh
 ./PlotGraphics.sh

@@ -21,9 +21,6 @@ repositories_contributors_count = []
 url_ant = ""
 name_ant = ""
 
-if language == "VisualBasic":
-    language = "Visual Basic"
-
 git_query = "stars:>=15 language:\"" + language + "\""
 
 repositories = github.search_repositories(query=git_query)
@@ -79,6 +76,7 @@ for repo in repositories:
                 repositories_name.append(repo_name)
                 repositories_contributors_count.append(repo_contributors_count)
                 quant += 1
+                call(["./ExtractionRunner.sh", "%s" % language])
             else:
                 rmtree(language + "/" + repo_name, ignore_errors=True)
                 remove(language + "/" + repo_name + ".csv")

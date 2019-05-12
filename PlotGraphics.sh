@@ -1,6 +1,6 @@
 #!/bin/bash
 
-languages=("Java" "C#" "PHP" "Visual Basic" "C")
+languages=("Java" "C#" "PHP" "Visual Basic" "C" "JavaScript")
 
 for language in "${languages[@]}"
 do
